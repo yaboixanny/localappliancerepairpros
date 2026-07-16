@@ -1118,7 +1118,29 @@ footer {
     }
 
     .appliance-strip-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .appliance-pill {
+        grid-column: span 2;
+        min-height: 92px;
+        aspect-ratio: 1 / 1;
+        padding: 14px 8px;
+        gap: 8px;
+    }
+
+    .appliance-pill span {
+        font-size: 0.82rem;
+        line-height: 1.2;
+    }
+
+    .appliance-pill:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+
+    .appliance-pill:nth-child(5) {
+        grid-column: 4 / span 2;
     }
 
     .owner-intro {

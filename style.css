@@ -431,6 +431,10 @@ html, body {
     gap: 14px;
 }
 
+.appliance-issues-strip .appliance-strip-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .appliance-pill {
     display: flex;
     flex-direction: column;
@@ -1122,6 +1126,10 @@ footer {
         gap: 10px;
     }
 
+    .appliance-issues-strip .appliance-strip-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .appliance-pill {
         grid-column: span 2;
         min-height: 92px;
@@ -1135,12 +1143,29 @@ footer {
         line-height: 1.2;
     }
 
+    .appliance-issues-strip .appliance-pill {
+        grid-column: span 1;
+        min-height: 104px;
+        aspect-ratio: auto;
+        padding: 14px 8px;
+    }
+
+    .appliance-issues-strip .appliance-pill span {
+        font-size: 0.76rem;
+        line-height: 1.15;
+    }
+
     .appliance-pill:nth-child(4) {
         grid-column: 2 / span 2;
     }
 
     .appliance-pill:nth-child(5) {
         grid-column: 4 / span 2;
+    }
+
+    .appliance-issues-strip .appliance-pill:nth-child(4),
+    .appliance-issues-strip .appliance-pill:nth-child(5) {
+        grid-column: span 1;
     }
 
     .owner-intro {
